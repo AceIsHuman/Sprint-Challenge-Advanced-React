@@ -11,6 +11,13 @@ class PlayersList extends React.Component {
     }
   }
 
+  componentDidMount() {
+    fetch('http://localhost:5000/api/players')
+      .then(res => res.json())
+      .then(res => this.setState({ ...this.state, players: res }))
+      .catch(err => console.error(err.response))
+  }
+
   render() {
     return (
       <Card.Group>
