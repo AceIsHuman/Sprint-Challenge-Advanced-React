@@ -2,12 +2,14 @@ import React from 'react';
 import { Card } from 'semantic-ui-react';
 
 import PlayerCard from './PlayerCard';
+import FavoritePlayers from './FavoritePlayers';
 
 class PlayersList extends React.Component {
   constructor() {
     super();
     this.state = {
-      players: []
+      players: [],
+      favoritePlayers: []
     }
   }
 
@@ -20,11 +22,14 @@ class PlayersList extends React.Component {
 
   render() {
     return (
-      <Card.Group centered>
-        {this.state.players.map(player => (
-          <PlayerCard key={player.id} player={player} />
-      ))}
-      </Card.Group>
+      <div>
+        <FavoritePlayers favoritePlayers={this.state.favoritePlayers} />
+        <Card.Group centered>
+          {this.state.players.map(player => (
+            <PlayerCard key={player.id} player={player} />
+        ))}
+        </Card.Group>
+      </div>
     )
   }
 }
