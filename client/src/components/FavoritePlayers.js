@@ -8,7 +8,7 @@ class FavoritePlayers extends React.Component {
 
   render() {
     return (
-      <List horizontal>
+      <List  data-testid='favorite-players' horizontal>
         {this.props.favoritePlayers ?
           this.props.favoritePlayers.map(player => (
             <List.Item key={player.id}>
