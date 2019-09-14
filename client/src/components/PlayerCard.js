@@ -14,7 +14,7 @@ class PlayerCard extends React.Component {
         <Card.Content>
           <Card.Header>{player.name}</Card.Header>
           <Card.Meta>{player.country}</Card.Meta>
-          <Card.Description>{player.name} has beend searched {player.searches} times.</Card.Description>
+          <Card.Description>{player.name} has been searched {player.searches} times.</Card.Description>
         </Card.Content>
       </Card> 
     )
