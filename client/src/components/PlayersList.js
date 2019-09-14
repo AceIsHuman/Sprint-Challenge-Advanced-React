@@ -23,10 +23,10 @@ class PlayersList extends React.Component {
   render() {
     return (
       <div>
-        <FavoritePlayers favoritePlayers={this.state.favoritePlayers} />
+        <FavoritePlayers favoritePlayers={this.props.favoritePlayers} />
         <Card.Group centered>
           {this.state.players.map(player => (
-            <PlayerCard key={player.id} player={player} />
+            <PlayerCard key={player.id} player={player} setFavoritePlayers={this.props.setFavoritePlayers} />
         ))}
         </Card.Group>
       </div>
