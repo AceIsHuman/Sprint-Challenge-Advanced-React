@@ -10,7 +10,9 @@ class PlayerCard extends React.Component {
     const player = this.props.player;
 
     return (
-      <Card>
+      <Card onClick={() => {
+        this.props.setFavoritePlayers(player)
+      }}>
         <Card.Content>
           <Card.Header>{player.name}</Card.Header>
           <Card.Meta>{player.country}</Card.Meta>
