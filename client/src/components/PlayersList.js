@@ -20,7 +20,7 @@ class PlayersList extends React.Component {
 
   render() {
     return (
-      <Card.Group>
+      <Card.Group centered>
         {this.state.players.map(player => (
           <PlayerCard key={player.id} player={player} />
       ))}
